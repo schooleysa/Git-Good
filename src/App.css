@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+.sr-only{
+  display: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{
+  margin: 50px auto;
+  font-size: 60px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+input{
+  margin: 20px;
+  min-width: 400px;
+  padding: 5px;
+}
+
+@media (max-width: 768px){
+  .search-container{
+    flex-direction: column !important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (max-width: 420px){
+  input{
+    min-width: auto;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+.reset{
+  margin: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.repoList,
+.noRepos{
+  margin-top: 20px;
+}
+
+.logo-o{
+  color: transparent;
+  background: url("GitHub-Mark-64px.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 100% 70%;
+}
+
+.o1{
+    animation: bounce 0.8s;
+    animation-direction: alternate;
+    animation-timing-function: ease;
+    animation-iteration-count: 3;
+}
+
+.o2{
+  animation: bounce 1s;
+  animation-direction: alternate;
+  animation-timing-function: ease;
+  animation-iteration-count: 3;
+}
+@keyframes bounce { 
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-25px) rotate(180deg); }
+  100% { transform: translateY(0) rotate(360deg);
+  }  
 }
